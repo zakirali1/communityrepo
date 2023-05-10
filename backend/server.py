@@ -13,7 +13,7 @@ app.config['CORS_HEADERS'] = 'Content-Type'
 
 # Constants
 base_url = 'https://demo.wavefront.com'
-api_key = '7d7ec83b-8d99-4539-b49e-41fdd3660839'
+api_key = ''
 
 # Create a Wavefront API Client
 config = wave_api.Configuration()

@@ -30,7 +30,7 @@ app.get('/user', async (req, res) => {
     try {
         const response = await axios.get('https://demo.wavefront.com/api/v2/user', {
             headers: {
-                'Authorization': 'Bearer xxxxx' 
+                'Authorization': 'Bearer 99541744-8cc1-453a-8cde-119c601b5392' 
             }, 
             httpsAgent: agent
         });

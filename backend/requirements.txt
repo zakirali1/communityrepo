@@ -1,0 +1,4 @@
+flask
+wavefront-api-client
+flask-cors
+uuid

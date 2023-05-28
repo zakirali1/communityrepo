@@ -7,21 +7,28 @@ import Test from './Test.js'
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
+import { BrowserRouter, Routes, Route, Navigate} from 'react-router-dom'
+import DashboardDetails from './DashboardDetails.js';
 
 function App() {
   return (
+    <>
+    <BrowserRouter>
     <div className="App">
       <Banner /> 
-      <Container className="wrapper-card"fluid>
-          <Row>
-           
-      <List /> 
-  
-  </Row>
-  </Container>
-      <Dashboard />
-      <Test />
+      
     </div>
+
+    <Routes>
+      <Route path='/' element={<Dashboard />} />
+      <Route path='*' element={<Navigate to={<Dashboard />} />} /> 
+      <Route path='/home' element={<Dashboard />} />
+      <Route path='/DashboardDetails/:id' element={<DashboardDetails />} />
+    </Routes>
+
+    </BrowserRouter>
+
+    </>
   );
 }
 

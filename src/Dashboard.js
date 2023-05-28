@@ -2,6 +2,9 @@ import React, { useState } from 'react';
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import axios from 'axios';
+import Row from 'react-bootstrap/Row'
+import Container from 'react-bootstrap/Container';
+import List from './List.js'
 
 
 function Dashboard() {
@@ -58,6 +61,15 @@ function Dashboard() {
   return (
     <>
       <div>Dashboard</div>
+
+      <Container className="wrapper-card"fluid>
+          <Row>
+           
+      <List /> 
+  
+  </Row>
+  </Container>
+  
       <Form>
         <Form.Group controlId="formId">
           <Form.Label>Dashboard ID</Form.Label>

@@ -43,7 +43,7 @@ def add_dashboard():
     try:
         
         api_instance = wave_api.DashboardApi(wave_api.ApiClient(config))
-        created_dashboard = api_instance.create_dashboard(body=current_Dash)
+        created_dashboard = api_instance.create_dashboard(body=currentDash)
         return json.dumps(created_dashboard.to_dict())
     except ApiException as e:
         return("Exception when calling DashboardApi->create_dashboard: %s\n" % e, 500)

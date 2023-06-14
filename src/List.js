@@ -4,6 +4,9 @@ import Button from "react-bootstrap/Button";
 import Card from "react-bootstrap/Card";
 import "./list.css";
 import {Link} from 'react-router-dom'
+import Container from 'react-bootstrap/Container';
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
 
 
 function List() {
@@ -14,7 +17,7 @@ function List() {
 
  
  function handleDashBoardClick(dashboard) {
-
+  
     const {src, ...newDashboard} = dashboard;
     setSelectedDash(newDashboard);
     console.log(selectedDash)
@@ -26,6 +29,7 @@ function List() {
   return (
     <>
       {dashboards.map((dashboard, index) => ( // Changed map function syntax
+
         <Card key={index} className="lists" style={{ width: "18rem" }}>
           <Link to={`/DashboardDetails/${index}`}>
           <Card.Img

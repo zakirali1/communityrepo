@@ -1739,6 +1739,7 @@
       {
         "name": "Service Dashboard (cluster info)",
         "url": "Service-Dashboard-cluster-info",
+        "src": "/images/serviceDashboard.png",
         "description": "",
         "eventFilterType": "NONE",
         "eventQuery": "",

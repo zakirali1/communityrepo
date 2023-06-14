@@ -1,12 +1,36 @@
+
+* {
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+
 .navigator { 
- box-sizing: border-box;
- margin: 0;
- padding: 0;
- min-height: 10vh;
+ 
+
 
 }
 
 .vmw {
     width: 200px;
 }
+
+
+.container {
+    display: inline-flex;
+    border-style: 5px solid red;
+    width: 100vw;
+    place-items: center; 
+    justify-content: space-between;
+    min-height: 5vh;
+
+   
+}
+
+h1 {
+    padding-right: 10px;
+    font-family: 'Lexend', sans-serif;
+    font-size: 32px;
+}
+
 

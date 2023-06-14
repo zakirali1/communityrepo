@@ -6,11 +6,7 @@ import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
 import Container from 'react-bootstrap/Container';
 import List from './List.js'
-import './dashboard.css';
-import TextField from "@mui/material/TextField";
-import data from './templates.json'
-import Card from 'react-bootstrap/Card';
-import Filtered from './FilteredData.js'
+import './dashboard.css'
 
 
 function Dashboard() {
@@ -20,7 +16,6 @@ function Dashboard() {
   const [chartName, setChartName] = useState('');
   const [queryName, setQueryName] = useState('');
   const [query, setQuery] = useState('');
-  const [inputText, setInputText] = useState('')
 
   async function handleOnClick() {
     console.log('clicked react button');
@@ -65,13 +60,6 @@ function Dashboard() {
     }
   }
 
-function inputHandler(e) {
-console.log(e.currentTarget.value.toLowerCase())
-setInputText(e.currentTarget.value)
-
-
-  }
-
   return (
     <>
      
@@ -82,36 +70,72 @@ setInputText(e.currentTarget.value)
   <p><strong>From nodecharts to heatmaps, cost analysis to in-depth visualisations any way you want. Pick your favourite!</strong></p>
 </div>
 
-<div className="search">
-<TextField
-          id="outlined-basic"
-          variant="outlined"
-          fullWidth
-          label="Search"
-          onChange={inputHandler}
-        />
-        </div>
-
-      <Container className="wrapper-card" fluid>
-            
+      <Container className="wrapper-card"fluid>
+          
       <Row>
-        
-        {inputText ? (
-            <Filtered search={inputText} />
-            ) : (
-              <List />
-        )}
-      
-
-
-        
-         
+      <List /> 
   
   </Row>
       
   </Container>
   
-      
+      <Form>
+        <Form.Group controlId="formId">
+          <Form.Label>Dashboard ID</Form.Label>
+          <Form.Control
+            type="text"
+            value={id}
+            onChange={(event) => setId(event.target.value)}
+            placeholder="Enter dashboard ID"
+          />
+        </Form.Group>
+        <Form.Group controlId="formName">
+          <Form.Label>Dashboard Name</Form.Label>
+          <Form.Control
+            type="text"
+            value={name}
+            onChange={(event) => setName(event.target.value)}
+            placeholder="Enter dashboard name"
+          />
+        </Form.Group>
+        <Form.Group controlId="formUrl">
+          <Form.Label>Dashboard URL</Form.Label>
+          <Form.Control
+            type="text"
+            value={url}
+            onChange={(event) => setUrl(event.target.value)}
+            placeholder="Enter dashboard URL"
+          />
+        </Form.Group>
+        <Form.Group controlId="formChartName">
+          <Form.Label>Chart Name</Form.Label>
+          <Form.Control
+            type="text"
+            value={chartName}
+            onChange={(event) => setChartName(event.target.value)}
+            placeholder="Enter chart name"
+          />
+        </Form.Group>
+        <Form.Group controlId="formQueryName">
+          <Form.Label>Query Name</Form.Label>
+          <Form.Control
+            type="text"
+            value={queryName}
+            onChange={(event) => setQueryName(event.target.value)}
+            placeholder="Enter query name"
+          />
+        </Form.Group>
+        <Form.Group controlId="formQuery">
+          <Form.Label>Query</Form.Label>
+          <Form.Control
+            type="text"
+            value={query}
+            onChange={(event) => setQuery(event.target.value)}
+            placeholder="Enter query"
+          />
+        </Form.Group>
+        <Button onClick={handleOnClick}>Create Dashboard</Button>
+      </Form>
     </>
   );
 }

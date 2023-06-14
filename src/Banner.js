@@ -14,6 +14,7 @@ function Banner() {
       <Link to={'/'}>
         <Navbar.Brand href="#"><img className="vmw" src="/images/VMware-logo.png"/></Navbar.Brand>
     </Link>
+    <h1>Dashboards</h1>
       </Container>
     </Navbar>
   </Container>

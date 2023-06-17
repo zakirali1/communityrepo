@@ -1,4 +1,4 @@
-import React, {useState} from 'react'
+import React, {useState, useEffect} from 'react'
 import data from './templates.json'
 import List from './List.js'
 import {Link} from 'react-router-dom';
@@ -9,6 +9,11 @@ import Button from "react-bootstrap/Button";
 function FilteredData({search}) {
     const [dashboards, setDashboards] = useState(data.filter(el => el['name'].includes(search)))
     console.log(dashboards)
+
+    useEffect(()=> {
+      
+      setDashboards(data.filter(el => el['name'].includes(search)))
+    }, [dashboards])
 
     return (
         <>

@@ -8,12 +8,12 @@ import Button from "react-bootstrap/Button";
 
 function FilteredData({search}) {
     const [dashboards, setDashboards] = useState(data.filter(el => el['name'].includes(search)))
-    console.log(dashboards)
+    //console.log(dashboards)
 
     useEffect(()=> {
       
       setDashboards(data.filter(el => el['name'].includes(search)))
-    }, [dashboards])
+    }, [dashboards])  
 
     return (
         <>
@@ -35,11 +35,8 @@ function FilteredData({search}) {
                   bulk of the card's content.
                 </Card.Text>
               
-                <Button
-                  variant="primary"
-                  
-                >
-                  Go somewhere
+              <Button>
+                <Link to={`/DashboardDetails/${index}`} style={{textDecoration: "none"}}>Click to add</Link>
                 </Button>
               </Card.Body>
             </Card>

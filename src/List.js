@@ -16,11 +16,11 @@ function List() {
  console.log(selectedDash)
 
  
- function handleDashBoardClick(dashboard) {
-  
+ function handleDashBoardClick(dashboard, index) {
     const {src, ...newDashboard} = dashboard;
     setSelectedDash(newDashboard);
-    console.log(selectedDash)
+    console.log(selectedDash);
+    
     
   }
 
@@ -48,9 +48,9 @@ function List() {
           
             <Button
               variant="primary"
-              onClick={() => handleDashBoardClick(dashboard)} // Pass the clicked dashboard to setSelectedDash
+              onClick={() => handleDashBoardClick(dashboard, index)} // Pass the clicked dashboard to setSelectedDash
             >
-              Go somewhere
+             <Link to={`/DashboardDetails/${index}`} style={{textDecoration: "none"}}>Click to add</Link>
             </Button>
           </Card.Body>
         </Card>

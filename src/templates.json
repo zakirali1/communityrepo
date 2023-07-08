@@ -8371,5 +8371,1185 @@
           }
         },
         "disableRefreshInLiveMode": false
+      },
+      {
+        "name": "Kubernetes Limits and Requests Compliance (dbr) & (mse)",
+        "url": "Kubernetes-Limits-and-Requests-Compliance-dbr-mse",
+        "src": "/images/K8limits.png",
+        "description": "",
+        "eventFilterType": "NONE",
+        "eventQuery": "",
+        "defaultTimeWindow": "",
+        "displayDescription": false,
+        "displaySectionTableOfContents": true,
+        "displayQueryParameters": true,
+        "sections": [
+          {
+            "name": "Metrics Integration",
+            "id": "g4QLj",
+            "rows": [
+              {
+                "charts": [
+                  {
+                    "chartSettings": {
+                      "type": "markdown-widget",
+                      "plainMarkdownContent": "### Requests and Limits Key Indicators\n\nNumbers of pods without Request and Limits set up. [Read More about Requests and Limits](https://kubernetes.io/docs/concepts/configuration/manage-resources-containers/)",
+                      "autoColumnTags": false,
+                      "sparklineDecimalPrecision": 0,
+                      "defaultSortColumn": null,
+                      "sparklineDisplayColor": null,
+                      "sparklineLineColor": null,
+                      "sparklineFillColor": null
+                    },
+                    "includeObsoleteMetrics": false,
+                    "name": "Info",
+                    "units": "Units",
+                    "summarization": "MEAN",
+                    "base": 0,
+                    "chartAttributes": {
+                      "dashboardLayout": {
+                        "x": 0,
+                        "y": 0,
+                        "w": 12,
+                        "h": 3
+                      }
+                    },
+                    "sources": [
+                      {
+                        "name": "A",
+                        "query": "",
+                        "querybuilderEnabled": true,
+                        "sourceDescription": "",
+                        "scatterPlotSource": "Y"
+                      }
+                    ],
+                    "noDefaultEvents": false,
+                    "description": ""
+                  }
+                ],
+                "heightFactor": 50
+              }
+            ],
+            "sectionFilter": null
+          },
+          {
+            "name": "KPI",
+            "id": "Limits-and-Requests-Community-v2-section-1",
+            "rows": [
+              {
+                "charts": [
+                  {
+                    "chartSettings": {
+                      "plainMarkdownContent": "<clr-icon shape=\"cpu\"></clr-icon> CPU Indicators",
+                      "fixedLegendFilterField": "CURRENT",
+                      "fixedLegendFilterLimit": 5,
+                      "fixedLegendPosition": "RIGHT",
+                      "lineType": "linear",
+                      "windowing": "full",
+                      "fixedLegendFilterSort": "TOP",
+                      "type": "markdown-widget",
+                      "tagMode": "all",
+                      "fixedLegendDisplayStats": [
+                        "CURRENT"
+                      ],
+                      "sparklineDecimalPrecision": 0,
+                      "autoColumnTags": false,
+                      "numTags": 4,
+                      "defaultSortColumn": null,
+                      "sparklineDisplayColor": null,
+                      "sparklineLineColor": null,
+                      "sparklineFillColor": null
+                    },
+                    "includeObsoleteMetrics": false,
+                    "name": "Info",
+                    "units": "Units",
+                    "summarization": "MEAN",
+                    "base": 0,
+                    "chartAttributes": {
+                      "lineFill": 1,
+                      "dashboardLayout": {
+                        "x": 0,
+                        "y": 0,
+                        "w": 6,
+                        "h": 2
+                      }
+                    },
+                    "sources": [
+                      {
+                        "name": "A",
+                        "query": "",
+                        "querybuilderEnabled": true,
+                        "sourceDescription": ""
+                      }
+                    ],
+                    "noDefaultEvents": false,
+                    "description": ""
+                  },
+                  {
+                    "chartSettings": {
+                      "plainMarkdownContent": "<clr-icon shape=\"memory\"></clr-icon> Memory Indicators",
+                      "fixedLegendFilterField": "CURRENT",
+                      "fixedLegendFilterLimit": 5,
+                      "fixedLegendPosition": "RIGHT",
+                      "lineType": "linear",
+                      "windowing": "full",
+                      "fixedLegendFilterSort": "TOP",
+                      "type": "markdown-widget",
+                      "tagMode": "all",
+                      "fixedLegendDisplayStats": [
+                        "CURRENT"
+                      ],
+                      "sparklineDecimalPrecision": 0,
+                      "autoColumnTags": false,
+                      "numTags": 4,
+                      "defaultSortColumn": null,
+                      "sparklineDisplayColor": null,
+                      "sparklineLineColor": null,
+                      "sparklineFillColor": null
+                    },
+                    "includeObsoleteMetrics": false,
+                    "name": "Info",
+                    "units": "Units",
+                    "summarization": "MEAN",
+                    "base": 0,
+                    "chartAttributes": {
+                      "lineFill": 1,
+                      "dashboardLayout": {
+                        "x": 6,
+                        "y": 0,
+                        "w": 6,
+                        "h": 2
+                      }
+                    },
+                    "sources": [
+                      {
+                        "name": "A",
+                        "query": "",
+                        "querybuilderEnabled": true,
+                        "sourceDescription": ""
+                      }
+                    ],
+                    "noDefaultEvents": false,
+                    "description": ""
+                  }
+                ],
+                "heightFactor": 30
+              },
+              {
+                "charts": [
+                  {
+                    "anomalySeverity": "medium",
+                    "anomalyDetectionOn": false,
+                    "chartSettings": {
+                      "y1ScaleSIBy1024": false,
+                      "fixedLegendEnabled": false,
+                      "fixedLegendFilterField": "CURRENT",
+                      "y0ScaleSIBy1024": false,
+                      "sparklineDisplayFontSize": "100",
+                      "stackType": "zero",
+                      "fixedLegendFilterLimit": 5,
+                      "fixedLegendShowSourceName": true,
+                      "showValueColumn": true,
+                      "fixedLegendPosition": "RIGHT",
+                      "customTags": [
+                        "pod_name"
+                      ],
+                      "showRawValues": false,
+                      "lineType": "linear",
+                      "showHosts": true,
+                      "sparklineValueColorMapApplyTo": "TEXT",
+                      "groupBySource": false,
+                      "windowing": "full",
+                      "sparklineSize": "BACKGROUND",
+                      "fixedLegendFilterSort": "TOP",
+                      "y1Units": "",
+                      "sortValuesDescending": true,
+                      "fixedLegendShowMetricName": false,
+                      "sparklineDisplayValueType": "VALUE",
+                      "type": "sparkline",
+                      "y1UnitAutoscaling": false,
+                      "showLabels": true,
+                      "sparklineValueTextMapText": [
+                        "new highest"
+                      ],
+                      "tagMode": "custom",
+                      "fixedLegendUseRawStats": false,
+                      "y0UnitAutoscaling": false,
+                      "fixedLegendDisplayStats": [
+                        "CURRENT"
+                      ],
+                      "sparklineDisplayHorizontalPosition": "MIDDLE",
+                      "sparklineDecimalPrecision": 0,
+                      "autoColumnTags": false,
+                      "numTags": 4,
+                      "defaultSortColumn": null,
+                      "sparklineDisplayColor": null,
+                      "sparklineLineColor": null,
+                      "sparklineFillColor": null
+                    },
+                    "displayConfidenceBounds": false,
+                    "includeObsoleteMetrics": false,
+                    "filterOutNonAnomalies": false,
+                    "name": "Pods without CPU Request",
+                    "anomalySampleSize": "8",
+                    "units": "",
+                    "summarization": "MEAN",
+                    "base": 0,
+                    "chartAttributes": {
+                      "lineFill": 1,
+                      "singleStat": {
+                        "sparklineDisplayLabel": "Count",
+                        "sparklineDisplaySubLabel": "Pods without CPU Request"
+                      },
+                      "dashboardLayout": {
+                        "x": 0,
+                        "y": 2,
+                        "w": 3,
+                        "h": 5
+                      },
+                      "y0ScaleDecimal": false
+                    },
+                    "sources": [
+                      {
+                        "name": "D Clone",
+                        "query": "count(ts(\"kubernetes.pod.cpu.request\", cluster=${cluster_name} and namespace_name=${namespace}).eq(0))",
+                        "disabled": false,
+                        "secondaryAxis": false,
+                        "queryType": "WQL",
+                        "querybuilderEnabled": false
+                      }
+                    ],
+                    "noDefaultEvents": false,
+                    "anomalyType": "both"
+                  },
+                  {
+                    "anomalySeverity": "medium",
+                    "anomalyDetectionOn": false,
+                    "chartSettings": {
+                      "y1ScaleSIBy1024": false,
+                      "fixedLegendEnabled": false,
+                      "fixedLegendFilterField": "CURRENT",
+                      "y0ScaleSIBy1024": false,
+                      "sparklineDisplayFontSize": "100",
+                      "fixedLegendFilterLimit": 5,
+                      "fixedLegendShowSourceName": true,
+                      "fixedLegendPosition": "RIGHT",
+                      "customTags": [],
+                      "lineType": "linear",
+                      "showHosts": true,
+                      "sparklineValueColorMapApplyTo": "TEXT",
+                      "windowing": "full",
+                      "sparklineSize": "BACKGROUND",
+                      "fixedLegendFilterSort": "TOP",
+                      "y1Units": "",
+                      "sortValuesDescending": true,
+                      "fixedLegendShowMetricName": false,
+                      "sparklineDisplayValueType": "VALUE",
+                      "type": "sparkline",
+                      "y1UnitAutoscaling": false,
+                      "showLabels": true,
+                      "sparklineValueTextMapText": [
+                        "new highest"
+                      ],
+                      "tagMode": "all",
+                      "fixedLegendUseRawStats": false,
+                      "y0UnitAutoscaling": false,
+                      "fixedLegendDisplayStats": [
+                        "CURRENT"
+                      ],
+                      "sparklineDisplayHorizontalPosition": "MIDDLE",
+                      "sparklineDecimalPrecision": 0,
+                      "autoColumnTags": false,
+                      "numTags": 4,
+                      "defaultSortColumn": null,
+                      "sparklineDisplayColor": null,
+                      "sparklineLineColor": null,
+                      "sparklineFillColor": null
+                    },
+                    "displayConfidenceBounds": false,
+                    "includeObsoleteMetrics": false,
+                    "filterOutNonAnomalies": false,
+                    "name": "Pods without CPU Limits",
+                    "anomalySampleSize": "8",
+                    "units": "",
+                    "summarization": "MEAN",
+                    "base": 0,
+                    "chartAttributes": {
+                      "lineFill": 1,
+                      "singleStat": {
+                        "sparklineDisplayLabel": "Count",
+                        "sparklineDisplaySubLabel": "Pods without CPU Limits"
+                      },
+                      "dashboardLayout": {
+                        "x": 3,
+                        "y": 2,
+                        "w": 3,
+                        "h": 5
+                      },
+                      "y0ScaleDecimal": false
+                    },
+                    "sources": [
+                      {
+                        "name": "D",
+                        "query": "count(ts(\"kubernetes.pod.cpu.limit\", cluster=${cluster_name} and namespace_name=${namespace}).eq(0))",
+                        "disabled": false,
+                        "secondaryAxis": false,
+                        "queryType": "WQL",
+                        "querybuilderEnabled": false
+                      }
+                    ],
+                    "noDefaultEvents": false,
+                    "anomalyType": "both"
+                  },
+                  {
+                    "anomalySeverity": "medium",
+                    "anomalyDetectionOn": false,
+                    "chartSettings": {
+                      "y1ScaleSIBy1024": false,
+                      "fixedLegendEnabled": false,
+                      "fixedLegendFilterField": "CURRENT",
+                      "y0ScaleSIBy1024": false,
+                      "sparklineDisplayFontSize": "100",
+                      "fixedLegendFilterLimit": 5,
+                      "fixedLegendShowSourceName": true,
+                      "fixedLegendPosition": "RIGHT",
+                      "customTags": [],
+                      "lineType": "linear",
+                      "showHosts": true,
+                      "sparklineValueColorMapApplyTo": "TEXT",
+                      "windowing": "full",
+                      "sparklineSize": "BACKGROUND",
+                      "fixedLegendFilterSort": "TOP",
+                      "y1Units": "",
+                      "sortValuesDescending": true,
+                      "fixedLegendShowMetricName": false,
+                      "sparklineDisplayValueType": "VALUE",
+                      "type": "sparkline",
+                      "y1UnitAutoscaling": false,
+                      "showLabels": true,
+                      "sparklineValueTextMapText": [
+                        "new highest"
+                      ],
+                      "tagMode": "all",
+                      "fixedLegendUseRawStats": false,
+                      "y0UnitAutoscaling": false,
+                      "fixedLegendDisplayStats": [
+                        "CURRENT"
+                      ],
+                      "sparklineDisplayHorizontalPosition": "MIDDLE",
+                      "sparklineDecimalPrecision": 0,
+                      "autoColumnTags": false,
+                      "numTags": 4,
+                      "defaultSortColumn": null,
+                      "sparklineDisplayColor": null,
+                      "sparklineLineColor": null,
+                      "sparklineFillColor": null
+                    },
+                    "displayConfidenceBounds": false,
+                    "includeObsoleteMetrics": false,
+                    "filterOutNonAnomalies": false,
+                    "name": "Pods without CPU Request",
+                    "anomalySampleSize": "8",
+                    "units": "",
+                    "summarization": "MEAN",
+                    "base": 0,
+                    "chartAttributes": {
+                      "lineFill": 1,
+                      "singleStat": {
+                        "sparklineDisplayLabel": "Count",
+                        "sparklineDisplaySubLabel": "Pods without Mem Request"
+                      },
+                      "dashboardLayout": {
+                        "x": 6,
+                        "y": 2,
+                        "w": 3,
+                        "h": 5
+                      },
+                      "y0ScaleDecimal": false
+                    },
+                    "sources": [
+                      {
+                        "name": "Count",
+                        "query": "count(ts(\"kubernetes.pod.memory.request\", cluster=${cluster_name} and namespace_name=${namespace}).eq(0))",
+                        "disabled": false,
+                        "secondaryAxis": false,
+                        "queryType": "WQL",
+                        "querybuilderEnabled": false
+                      }
+                    ],
+                    "noDefaultEvents": false,
+                    "anomalyType": "both"
+                  },
+                  {
+                    "anomalySeverity": "medium",
+                    "anomalyDetectionOn": false,
+                    "chartSettings": {
+                      "y1ScaleSIBy1024": false,
+                      "fixedLegendEnabled": false,
+                      "fixedLegendFilterField": "CURRENT",
+                      "y0ScaleSIBy1024": false,
+                      "sparklineDisplayFontSize": "100",
+                      "fixedLegendFilterLimit": 5,
+                      "fixedLegendShowSourceName": true,
+                      "fixedLegendPosition": "RIGHT",
+                      "customTags": [],
+                      "lineType": "linear",
+                      "showHosts": true,
+                      "sparklineValueColorMapApplyTo": "TEXT",
+                      "windowing": "full",
+                      "sparklineSize": "BACKGROUND",
+                      "fixedLegendFilterSort": "TOP",
+                      "y1Units": "",
+                      "sortValuesDescending": true,
+                      "fixedLegendShowMetricName": false,
+                      "sparklineDisplayValueType": "VALUE",
+                      "type": "sparkline",
+                      "y1UnitAutoscaling": false,
+                      "showLabels": true,
+                      "sparklineValueTextMapText": [
+                        "new highest"
+                      ],
+                      "tagMode": "all",
+                      "fixedLegendUseRawStats": false,
+                      "y0UnitAutoscaling": false,
+                      "fixedLegendDisplayStats": [
+                        "CURRENT"
+                      ],
+                      "sparklineDisplayHorizontalPosition": "MIDDLE",
+                      "sparklineDecimalPrecision": 0,
+                      "autoColumnTags": false,
+                      "numTags": 4,
+                      "defaultSortColumn": null,
+                      "sparklineDisplayColor": null,
+                      "sparklineLineColor": null,
+                      "sparklineFillColor": null
+                    },
+                    "displayConfidenceBounds": false,
+                    "includeObsoleteMetrics": false,
+                    "filterOutNonAnomalies": false,
+                    "name": "Pods without CPU Request",
+                    "anomalySampleSize": "8",
+                    "units": "",
+                    "summarization": "MEAN",
+                    "base": 0,
+                    "chartAttributes": {
+                      "lineFill": 1,
+                      "singleStat": {
+                        "sparklineDisplayLabel": "Count",
+                        "sparklineDisplaySubLabel": "Pods without Mem Limits"
+                      },
+                      "dashboardLayout": {
+                        "x": 9,
+                        "y": 2,
+                        "w": 3,
+                        "h": 5
+                      },
+                      "y0ScaleDecimal": false
+                    },
+                    "sources": [
+                      {
+                        "name": "Count",
+                        "query": "count(ts(\"kubernetes.pod.memory.limit\", cluster=${cluster_name} and namespace_name=${namespace}).eq(0))",
+                        "disabled": false,
+                        "secondaryAxis": false,
+                        "queryType": "WQL",
+                        "querybuilderEnabled": false
+                      }
+                    ],
+                    "noDefaultEvents": false,
+                    "anomalyType": "both"
+                  }
+                ],
+                "heightFactor": 100
+              }
+            ],
+            "sectionFilter": null
+          },
+          {
+            "name": "Real Usage",
+            "id": "Limits-and-Requests-Community-v2-section-2",
+            "rows": [
+              {
+                "charts": [
+                  {
+                    "chartSettings": {
+                      "plainMarkdownContent": "<clr-icon shape=\"cpu\"></clr-icon> CPU vs Real Usage",
+                      "fixedLegendFilterField": "CURRENT",
+                      "fixedLegendFilterLimit": 5,
+                      "fixedLegendPosition": "RIGHT",
+                      "lineType": "linear",
+                      "windowing": "full",
+                      "fixedLegendFilterSort": "TOP",
+                      "type": "markdown-widget",
+                      "tagMode": "all",
+                      "fixedLegendDisplayStats": [
+                        "CURRENT"
+                      ],
+                      "sparklineDecimalPrecision": 0,
+                      "autoColumnTags": false,
+                      "numTags": 4,
+                      "defaultSortColumn": null,
+                      "sparklineDisplayColor": null,
+                      "sparklineLineColor": null,
+                      "sparklineFillColor": null
+                    },
+                    "includeObsoleteMetrics": false,
+                    "name": "Info",
+                    "units": "Units",
+                    "summarization": "MEAN",
+                    "base": 0,
+                    "chartAttributes": {
+                      "lineFill": 1,
+                      "dashboardLayout": {
+                        "x": 0,
+                        "y": 0,
+                        "w": 6,
+                        "h": 2
+                      }
+                    },
+                    "sources": [
+                      {
+                        "name": "A",
+                        "query": "",
+                        "querybuilderEnabled": true,
+                        "sourceDescription": ""
+                      }
+                    ],
+                    "noDefaultEvents": false,
+                    "description": ""
+                  },
+                  {
+                    "chartSettings": {
+                      "plainMarkdownContent": "<clr-icon shape=\"memory\"></clr-icon> Memory vs Real Usage",
+                      "fixedLegendFilterField": "CURRENT",
+                      "fixedLegendFilterLimit": 5,
+                      "fixedLegendPosition": "RIGHT",
+                      "lineType": "linear",
+                      "windowing": "full",
+                      "fixedLegendFilterSort": "TOP",
+                      "type": "markdown-widget",
+                      "tagMode": "all",
+                      "fixedLegendDisplayStats": [
+                        "CURRENT"
+                      ],
+                      "sparklineDecimalPrecision": 0,
+                      "autoColumnTags": false,
+                      "numTags": 4,
+                      "defaultSortColumn": null,
+                      "sparklineDisplayColor": null,
+                      "sparklineLineColor": null,
+                      "sparklineFillColor": null
+                    },
+                    "includeObsoleteMetrics": false,
+                    "name": "Info",
+                    "units": "Units",
+                    "summarization": "MEAN",
+                    "base": 0,
+                    "chartAttributes": {
+                      "lineFill": 1,
+                      "dashboardLayout": {
+                        "x": 6,
+                        "y": 0,
+                        "w": 6,
+                        "h": 2
+                      }
+                    },
+                    "sources": [
+                      {
+                        "name": "A",
+                        "query": "",
+                        "querybuilderEnabled": true,
+                        "sourceDescription": ""
+                      }
+                    ],
+                    "noDefaultEvents": false,
+                    "description": ""
+                  }
+                ],
+                "heightFactor": 30
+              },
+              {
+                "charts": [
+                  {
+                    "chartSettings": {
+                      "y1ScaleSIBy1024": false,
+                      "fixedLegendEnabled": false,
+                      "fixedLegendFilterField": "CURRENT",
+                      "y0ScaleSIBy1024": false,
+                      "stackType": "zero",
+                      "fixedLegendFilterLimit": 5,
+                      "fixedLegendShowSourceName": true,
+                      "fixedLegendPosition": "RIGHT",
+                      "customTags": [],
+                      "lineType": "linear",
+                      "showHosts": true,
+                      "windowing": "full",
+                      "fixedLegendFilterSort": "TOP",
+                      "y1Units": "",
+                      "sortValuesDescending": true,
+                      "fixedLegendShowMetricName": false,
+                      "type": "line",
+                      "y1UnitAutoscaling": false,
+                      "showLabels": true,
+                      "tagMode": "all",
+                      "fixedLegendUseRawStats": false,
+                      "y0UnitAutoscaling": true,
+                      "fixedLegendDisplayStats": [
+                        "CURRENT"
+                      ],
+                      "sparklineDecimalPrecision": 0,
+                      "autoColumnTags": false,
+                      "numTags": 4,
+                      "defaultSortColumn": null,
+                      "sparklineDisplayColor": null,
+                      "sparklineLineColor": null,
+                      "sparklineFillColor": null
+                    },
+                    "includeObsoleteMetrics": false,
+                    "name": "Request vs Real Usage",
+                    "units": "Units",
+                    "summarization": "MEAN",
+                    "base": 0,
+                    "chartAttributes": {
+                      "decimalPrecision": 0,
+                      "lineFill": 1,
+                      "colorMap": {
+                        "colors": [
+                          "#e02200",
+                          "#a36500"
+                        ],
+                        "values": [
+                          10
+                        ]
+                      },
+                      "dashboardLayout": {
+                        "x": 0,
+                        "y": 2,
+                        "w": 3,
+                        "h": 6
+                      }
+                    },
+                    "sources": [
+                      {
+                        "name": "Usage",
+                        "query": "rawsum(last(5m, ts(\"kubernetes.ns.cpu.usage_rate\", cluster=${cluster_name} and namespace_name=${namespace})))",
+                        "disabled": false,
+                        "queryType": "WQL",
+                        "querybuilderEnabled": false
+                      },
+                      {
+                        "name": "Request",
+                        "query": "rawsum(last(5m, ts(\"kubernetes.ns.cpu.request\", cluster=${cluster_name} and namespace_name=${namespace})))",
+                        "disabled": false,
+                        "queryType": "WQL",
+                        "querybuilderEnabled": false,
+                        "sourceColor": "rgba(145,8,5,1)"
+                      }
+                    ],
+                    "noDefaultEvents": false,
+                    "description": ""
+                  },
+                  {
+                    "chartSettings": {
+                      "fixedLegendFilterField": "CURRENT",
+                      "stackType": "zero",
+                      "fixedLegendFilterLimit": 5,
+                      "fixedLegendPosition": "RIGHT",
+                      "lineType": "linear",
+                      "showHosts": true,
+                      "windowing": "full",
+                      "fixedLegendFilterSort": "TOP",
+                      "sortValuesDescending": true,
+                      "type": "line",
+                      "showLabels": true,
+                      "tagMode": "all",
+                      "y0UnitAutoscaling": true,
+                      "fixedLegendDisplayStats": [
+                        "CURRENT"
+                      ],
+                      "sparklineDecimalPrecision": 0,
+                      "autoColumnTags": false,
+                      "numTags": 4,
+                      "defaultSortColumn": null,
+                      "sparklineDisplayColor": null,
+                      "sparklineLineColor": null,
+                      "sparklineFillColor": null
+                    },
+                    "includeObsoleteMetrics": false,
+                    "name": "Limit vs Real Usage",
+                    "units": "Units",
+                    "summarization": "MEAN",
+                    "base": 0,
+                    "chartAttributes": {
+                      "decimalPrecision": 0,
+                      "lineFill": 1,
+                      "colorMap": {
+                        "colors": [
+                          "#e02200",
+                          "#a36500"
+                        ],
+                        "values": [
+                          10
+                        ]
+                      },
+                      "dashboardLayout": {
+                        "x": 3,
+                        "y": 2,
+                        "w": 3,
+                        "h": 6
+                      }
+                    },
+                    "sources": [
+                      {
+                        "name": "Usage",
+                        "query": "rawsum(last(5m, ts(\"kubernetes.ns.cpu.usage_rate\", cluster=${cluster_name} and namespace_name=${namespace})))",
+                        "querybuilderEnabled": false,
+                        "sourceDescription": ""
+                      },
+                      {
+                        "name": "Limit",
+                        "query": "rawsum(last(5m, ts(\"kubernetes.ns.cpu.limit\", cluster=${cluster_name} and namespace_name=${namespace})))",
+                        "querybuilderEnabled": false,
+                        "sourceDescription": ""
+                      }
+                    ],
+                    "noDefaultEvents": false,
+                    "description": ""
+                  },
+                  {
+                    "chartSettings": {
+                      "fixedLegendFilterField": "CURRENT",
+                      "stackType": "zero",
+                      "fixedLegendFilterLimit": 5,
+                      "fixedLegendPosition": "RIGHT",
+                      "lineType": "linear",
+                      "showHosts": true,
+                      "windowing": "full",
+                      "fixedLegendFilterSort": "TOP",
+                      "sortValuesDescending": true,
+                      "type": "line",
+                      "showLabels": true,
+                      "tagMode": "all",
+                      "y0UnitAutoscaling": true,
+                      "fixedLegendDisplayStats": [
+                        "CURRENT"
+                      ],
+                      "sparklineDecimalPrecision": 0,
+                      "autoColumnTags": false,
+                      "numTags": 4,
+                      "defaultSortColumn": null,
+                      "sparklineDisplayColor": null,
+                      "sparklineLineColor": null,
+                      "sparklineFillColor": null
+                    },
+                    "includeObsoleteMetrics": false,
+                    "name": "Request vs Real Usage",
+                    "units": "Units",
+                    "summarization": "MEAN",
+                    "base": 0,
+                    "chartAttributes": {
+                      "decimalPrecision": 0,
+                      "lineFill": 1,
+                      "colorMap": {
+                        "colors": [
+                          "#e02200",
+                          "#a36500"
+                        ],
+                        "values": [
+                          10
+                        ]
+                      },
+                      "dashboardLayout": {
+                        "x": 6,
+                        "y": 2,
+                        "w": 3,
+                        "h": 6
+                      }
+                    },
+                    "sources": [
+                      {
+                        "name": "Usage",
+                        "query": "rawsum(last(5m, ts(\"kubernetes.ns.memory.usage\", cluster=${cluster_name} and namespace_name=${namespace})))",
+                        "querybuilderEnabled": false,
+                        "sourceDescription": ""
+                      },
+                      {
+                        "name": "Request",
+                        "query": "rawsum(last(5m, ts(\"kubernetes.ns.memory.request\", cluster=${cluster_name} and namespace_name=${namespace})))",
+                        "querybuilderEnabled": false,
+                        "sourceDescription": "",
+                        "sourceColor": "rgba(145,8,5,1)"
+                      }
+                    ],
+                    "noDefaultEvents": false,
+                    "description": ""
+                  },
+                  {
+                    "chartSettings": {
+                      "fixedLegendFilterField": "CURRENT",
+                      "stackType": "zero",
+                      "fixedLegendFilterLimit": 5,
+                      "fixedLegendPosition": "RIGHT",
+                      "lineType": "linear",
+                      "showHosts": true,
+                      "windowing": "full",
+                      "fixedLegendFilterSort": "TOP",
+                      "sortValuesDescending": true,
+                      "type": "line",
+                      "showLabels": true,
+                      "tagMode": "all",
+                      "y0UnitAutoscaling": true,
+                      "fixedLegendDisplayStats": [
+                        "CURRENT"
+                      ],
+                      "sparklineDecimalPrecision": 0,
+                      "autoColumnTags": false,
+                      "numTags": 4,
+                      "defaultSortColumn": null,
+                      "sparklineDisplayColor": null,
+                      "sparklineLineColor": null,
+                      "sparklineFillColor": null
+                    },
+                    "includeObsoleteMetrics": false,
+                    "name": "Limit vs Real Usage",
+                    "units": "Units",
+                    "summarization": "MEAN",
+                    "base": 0,
+                    "chartAttributes": {
+                      "decimalPrecision": 0,
+                      "lineFill": 1,
+                      "colorMap": {
+                        "colors": [
+                          "#e02200",
+                          "#a36500"
+                        ],
+                        "values": [
+                          10
+                        ]
+                      },
+                      "dashboardLayout": {
+                        "x": 9,
+                        "y": 2,
+                        "w": 3,
+                        "h": 6
+                      }
+                    },
+                    "sources": [
+                      {
+                        "name": "Usage",
+                        "query": "rawsum(last(5m, ts(\"kubernetes.ns.memory.usage\", cluster=${cluster_name} and namespace_name=${namespace})))",
+                        "querybuilderEnabled": false,
+                        "sourceDescription": ""
+                      },
+                      {
+                        "name": "Limit",
+                        "query": "rawsum(last(5m, ts(\"kubernetes.ns.memory.limit\", cluster=${cluster_name} and namespace_name=${namespace})))",
+                        "querybuilderEnabled": false,
+                        "sourceDescription": ""
+                      }
+                    ],
+                    "noDefaultEvents": false,
+                    "description": ""
+                  }
+                ],
+                "heightFactor": 120
+              }
+            ],
+            "sectionFilter": null
+          },
+          {
+            "name": "Controller List",
+            "id": "Limits-and-Requests-Community-v2-section-3",
+            "rows": [
+              {
+                "charts": [
+                  {
+                    "chartSettings": {
+                      "plainMarkdownContent": "List of Deployment and Daemonset with objects without Limit or Request",
+                      "y1ScaleSIBy1024": false,
+                      "fixedLegendEnabled": false,
+                      "fixedLegendFilterField": "CURRENT",
+                      "y0ScaleSIBy1024": false,
+                      "fixedLegendFilterLimit": 5,
+                      "fixedLegendShowSourceName": true,
+                      "fixedLegendPosition": "RIGHT",
+                      "customTags": [],
+                      "lineType": "linear",
+                      "windowing": "full",
+                      "fixedLegendFilterSort": "TOP",
+                      "y1Units": "",
+                      "fixedLegendShowMetricName": false,
+                      "type": "markdown-widget",
+                      "y1UnitAutoscaling": false,
+                      "tagMode": "all",
+                      "fixedLegendUseRawStats": false,
+                      "y0UnitAutoscaling": false,
+                      "fixedLegendDisplayStats": [
+                        "CURRENT"
+                      ],
+                      "autoColumnTags": false,
+                      "numTags": 4,
+                      "defaultSortColumn": null,
+                      "sparklineDisplayColor": null,
+                      "sparklineLineColor": null,
+                      "sparklineFillColor": null
+                    },
+                    "includeObsoleteMetrics": false,
+                    "name": "Info",
+                    "units": "Units",
+                    "base": 0,
+                    "chartAttributes": {
+                      "lineFill": 1,
+                      "dashboardLayout": {
+                        "x": 0,
+                        "y": 0,
+                        "w": 3,
+                        "h": 8
+                      }
+                    },
+                    "sources": [
+                      {
+                        "name": "A",
+                        "query": "",
+                        "disabled": false,
+                        "secondaryAxis": false,
+                        "queryType": "WQL",
+                        "querybuilderEnabled": true,
+                        "querybuilderSerialization": "{\"_v\":1,\"metric\":\"ts()\",\"filters\":[[],\"and\"],\"functions\":[]}"
+                      }
+                    ],
+                    "noDefaultEvents": false
+                  },
+                  {
+                    "chartSettings": {
+                      "y1ScaleSIBy1024": false,
+                      "fixedLegendEnabled": false,
+                      "fixedLegendFilterField": "CURRENT",
+                      "y0ScaleSIBy1024": false,
+                      "sparklineDisplayFontSize": "100",
+                      "fixedLegendFilterLimit": 5,
+                      "fixedLegendShowSourceName": true,
+                      "showValueColumn": true,
+                      "fixedLegendPosition": "RIGHT",
+                      "customTags": [
+                        "deployment",
+                        "replicaset",
+                        "namespace_name"
+                      ],
+                      "showRawValues": false,
+                      "lineType": "linear",
+                      "showHosts": true,
+                      "sparklineValueColorMapApplyTo": "TEXT",
+                      "groupBySource": false,
+                      "windowing": "full",
+                      "sparklineSize": "BACKGROUND",
+                      "fixedLegendFilterSort": "TOP",
+                      "y1Units": "",
+                      "sortValuesDescending": true,
+                      "fixedLegendShowMetricName": false,
+                      "sparklineDisplayValueType": "VALUE",
+                      "type": "table",
+                      "y1UnitAutoscaling": false,
+                      "showLabels": true,
+                      "sparklineValueTextMapText": [
+                        "new highest"
+                      ],
+                      "tagMode": "all",
+                      "fixedLegendUseRawStats": false,
+                      "y0UnitAutoscaling": false,
+                      "fixedLegendDisplayStats": [
+                        "CURRENT"
+                      ],
+                      "sparklineDisplayHorizontalPosition": "MIDDLE",
+                      "sparklineDecimalPrecision": 0,
+                      "autoColumnTags": false,
+                      "numTags": 4,
+                      "defaultSortColumn": null,
+                      "sparklineDisplayColor": null,
+                      "sparklineLineColor": null,
+                      "sparklineFillColor": null
+                    },
+                    "includeObsoleteMetrics": false,
+                    "name": "Controller with objects without limit or request",
+                    "summarization": "MEAN",
+                    "base": 0,
+                    "chartAttributes": {
+                      "lineFill": 1,
+                      "singleStat": {
+                        "sparklineDisplayLabel": "Count",
+                        "sparklineDisplaySubLabel": "Pods without CPU Request"
+                      },
+                      "dashboardLayout": {
+                        "x": 3,
+                        "y": 0,
+                        "w": 9,
+                        "h": 8
+                      },
+                      "y0ScaleDecimal": false
+                    },
+                    "sources": [
+                      {
+                        "name": "A",
+                        "query": "count(taggify(ts(/kubernetes\\.pod\\.(cpu|memory)\\.(limit|request)/, cluster=${cluster_name} and namespace_name=${namespace}).eq(0),tagk,pod_name,owner,\"^(.*)-(.*)-(.*)$\", \"$1\"), owner)",
+                        "disabled": true,
+                        "queryType": "WQL",
+                        "querybuilderEnabled": false
+                      },
+                      {
+                        "name": "B",
+                        "query": "ts(\"kubernetes.deployment.desired_replicas\", cluster=${cluster_name} and namespace_name=${namespace})",
+                        "disabled": true,
+                        "queryType": "WQL",
+                        "querybuilderEnabled": false
+                      },
+                      {
+                        "name": "C",
+                        "query": "ts(\"kubernetes.daemonset.desired_scheduled\", cluster=${cluster_name} and namespace_name=${namespace})",
+                        "disabled": true,
+                        "queryType": "WQL",
+                        "querybuilderEnabled": false
+                      },
+                      {
+                        "name": "Deployment",
+                        "query": "join(\n  ${A} AS ts1 INNER JOIN ${B} AS ts2 ON ts1.owner=ts2.deployment ,\n  object=ts2.deployment, namespace_name=ts2.namespace_name, cluster=ts2.cluster,\n  ts2\n  )",
+                        "disabled": false,
+                        "queryType": "WQL",
+                        "querybuilderEnabled": false
+                      },
+                      {
+                        "name": "Daemonset",
+                        "query": "join(\n  ${A} AS ts1 INNER JOIN ${C} AS ts2 ON ts1.owner=ts2.daemonset ,\n  object=ts2.daemonset, namespace_name=ts2.namespace_name, cluster=ts2.cluster,\n  ts2\n  )",
+                        "disabled": false,
+                        "queryType": "WQL",
+                        "querybuilderEnabled": false
+                      }
+                    ],
+                    "noDefaultEvents": false,
+                    "description": ""
+                  }
+                ],
+                "heightFactor": 160
+              }
+            ],
+            "sectionFilter": null
+          }
+        ],
+        "parameterDetails": {
+          "namespace": {
+            "tagsBlackListRegex": "",
+            "parameterType": "DYNAMIC",
+            "tagKey": "namespace_name",
+            "queryValue": "limit(1000, ts(\"kubernetes.ns.memory.usage\", cluster=\"${cluster_name}\"))",
+            "order": 2,
+            "defaultValue": "Label",
+            "hideFromView": false,
+            "value": "*",
+            "label": "namespace",
+            "dynamicFieldType": "TAG_KEY",
+            "valuesToReadableStrings": {
+              "Label_70": "vmware-system-cloud-provider",
+              "Label_60": "pl",
+              "Label_71": "vmware-system-csi",
+              "Label_61": "px-operator",
+              "Label_72": "vmware-system-tmc",
+              "Label_50": "openshift-monitoring",
+              "Label_62": "rke-otel-demo",
+              "Label_73": "wavefront",
+              "Label_2": "aks-otel-demo",
+              "Label_40": "openshift-kube-apiserver-operator",
+              "Label_51": "openshift-multus",
+              "Label_63": "tanzu-kustomize-controller",
+              "Label_3": "aria-k8s",
+              "Label_30": "openshift-dns",
+              "Label_41": "openshift-kube-controller-manager",
+              "Label_52": "openshift-network-diagnostics",
+              "Label_64": "tanzu-observability-saas",
+              "Label_4": "default",
+              "Label_20": "openshift-cluster-machine-approver",
+              "Label_31": "openshift-dns-operator",
+              "Label_42": "openshift-kube-controller-manager-operator",
+              "Label_53": "openshift-network-operator",
+              "Label_65": "tanzu-source-controller",
+              "Label_5": "eks-otel-demo",
+              "Label_10": "observability-system",
+              "Label_21": "openshift-cluster-node-tuning-operator",
+              "Label_32": "openshift-etcd",
+              "Label_43": "openshift-kube-scheduler",
+              "Label_54": "openshift-oauth-apiserver",
+              "Label_66": "tanzu-system",
+              "Label_6": "gatekeeper-system",
+              "Label_11": "ocp-otel-demo",
+              "Label_22": "openshift-cluster-samples-operator",
+              "Label_33": "openshift-etcd-operator",
+              "Label_44": "openshift-kube-scheduler-operator",
+              "Label_55": "openshift-operator-lifecycle-manager",
+              "Label_67": "tkg-otel-demo",
+              "Label_7": "gke-otel-demo",
+              "Label_12": "olm",
+              "Label_23": "openshift-cluster-storage-operator",
+              "Label_34": "openshift-image-registry",
+              "Label_45": "openshift-kube-storage-version-migrator",
+              "Label_56": "openshift-sdn",
+              "Label_68": "velero",
+              "Label_8": "k8s-otel-broken",
+              "Label_13": "openshift-apiserver",
+              "Label_24": "openshift-cluster-version",
+              "Label_35": "openshift-ingress",
+              "Label_46": "openshift-kube-storage-version-migrator-operator",
+              "Label_57": "openshift-service-ca",
+              "Label_69": "vmware-system-auth",
+              "Label_9": "kube-system",
+              "Label_14": "openshift-apiserver-operator",
+              "Label_25": "openshift-config-operator",
+              "Label_36": "openshift-ingress-canary",
+              "Label_47": "openshift-machine-api",
+              "Label_58": "openshift-service-ca-operator",
+              "Label_15": "openshift-authentication",
+              "Label_26": "openshift-console",
+              "Label_37": "openshift-ingress-operator",
+              "Label_48": "openshift-machine-config-operator",
+              "Label_59": "openshift-vsphere-infra",
+              "Label_16": "openshift-authentication-operator",
+              "Label_27": "openshift-console-operator",
+              "Label_38": "openshift-insights",
+              "Label_49": "openshift-marketplace",
+              "Label_17": "openshift-cloud-controller-manager-operator",
+              "Label_28": "openshift-controller-manager",
+              "Label_39": "openshift-kube-apiserver",
+              "Label_18": "openshift-cloud-credential-operator",
+              "Label_29": "openshift-controller-manager-operator",
+              "Label_19": "openshift-cluster-csi-drivers",
+              "Label": "*"
+            },
+            "allowAll": true,
+            "selectedLabel": "Label"
+          },
+          "cluster_name": {
+            "tagsBlackListRegex": "",
+            "parameterType": "DYNAMIC",
+            "tagKey": "cluster",
+            "queryValue": "max(ts(\"kubernetes.cluster.cpu.limit\"), cluster)",
+            "order": 1,
+            "defaultValue": "Label",
+            "hideFromView": false,
+            "value": "*",
+            "label": "Cluster",
+            "dynamicFieldType": "TAG_KEY",
+            "valuesToReadableStrings": {
+              "Label_2": "aks-us-east-01",
+              "Label_3": "eks-us-east-01",
+              "Label_4": "explore-moad-tkg",
+              "Label_5": "gke-us-central-01",
+              "Label_10": "tkg-vsphere-cmbu-01",
+              "Label_6": "ocp-vsphere-cmbu-01",
+              "Label_7": "rke-azure-us-east-01",
+              "Label_8": "tkc-1.attached.attached.tmc",
+              "Label_9": "tkc-2.attached.attached.tmc",
+              "Label": "*"
+            },
+            "allowAll": true,
+            "selectedLabel": "Label"
+          }
+        }
       }
 ]

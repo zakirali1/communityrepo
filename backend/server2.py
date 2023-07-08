@@ -46,7 +46,13 @@ def add_dashboard():
         created_dashboard = api_instance.create_dashboard(body=currentDash)
         return json.dumps(created_dashboard.to_dict())
     except ApiException as e:
-        return("Exception when calling DashboardApi->create_dashboard: %s\n" % e, 500)
+        if e.status == 400:
+            #if Dashboard exists
+            dashboard_id = currentDash["url"]
+            created_dashboard = api_instance.update_dashboard(dashboard_id, body=currentDash)
+            return json.dumps(created_dashboard.to_dict())
+        else:
+            return("Exception when calling DashboardApi->create_dashboard: %s\n" % e, 500)
     
 
 # create an instance of the API class
